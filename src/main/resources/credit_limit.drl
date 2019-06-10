@@ -1,0 +1,8 @@
+import tracker.requirements.Transaction
+
+rule "rule 1"
+  when
+    t: Transaction(t.getScore()>20)
+  then
+    t.setApproved(true);
+end
