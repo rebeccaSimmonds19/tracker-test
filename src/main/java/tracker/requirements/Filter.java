@@ -8,6 +8,9 @@ import org.kie.api.runtime.KieSession;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Uses the rules to filter the credit requests
+ */
 public class Filter {
 
     public KieBase loadRules() {

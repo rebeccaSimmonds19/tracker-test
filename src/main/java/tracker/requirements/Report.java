@@ -8,6 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * creates the report in report.txt
+ */
 public class Report
 {
 

@@ -5,6 +5,9 @@ import onespot.pivotal.api.resources.Story;
 
 import java.util.List;
 
+/**
+ * collects requirements from pivotal
+ */
 public class Collector {
 
     private int PROJECT_ID = 2352861;

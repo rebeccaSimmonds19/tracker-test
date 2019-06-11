@@ -1,5 +1,8 @@
 package tracker.requirements;
 
+/**
+ * credit requests class
+ */
 public class Transaction {
     private int score;
     private boolean approve;

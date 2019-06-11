@@ -5,6 +5,9 @@ import org.kie.api.KieBase;
 
 import java.util.List;
 
+/**
+ * runs the example
+ */
 public class Main
 {
     public static void main(String[] args)
