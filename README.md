@@ -1,7 +1,7 @@
 # Requirements Tracker
 
 This repo contains a simple outline project that:
-1) captures requirements from [https://www.pivotaltracker.com/](pivotal tracker) 
+1) captures requirements from [pivotal tracker](https://www.pivotaltracker.com/)
 2) executes drools rules
 3) matches when a requirement has been implemented by a rule
 4) prints a report in "report.txt" to show these connects
