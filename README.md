@@ -14,3 +14,7 @@ This repo contains a simple outline project that:
 ## Running the code
 
 Download the repo and run the Main.java class
+
+## Uses Case
+
+The example is based on a finacial example of deciding if someone is accepted for a loan by using a credit score
