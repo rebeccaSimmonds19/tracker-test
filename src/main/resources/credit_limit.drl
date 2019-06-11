@@ -5,4 +5,5 @@ rule "rule 1"
     t: Transaction(t.getScore()>20)
   then
     t.setApproved(true);
+    t.setRuleName("rule 1");
 end

@@ -4,12 +4,9 @@ import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-import org.kie.api.runtime.StatelessKieSession;
-import org.kie.internal.runtime.StatelessKnowledgeSession;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Filter {
 
@@ -19,12 +16,14 @@ public class Filter {
         return kieContainer.getKieBase();
     }
 
-    public Transaction executeDroolsRules(KieBase base, Transaction t)
+    public List<String> executeDroolsRules(KieBase base, Transaction t)
     {
         KieSession ksession = base.newKieSession();
         ksession.insert(t);
-        int rulesFired = ksession.fireAllRules();
-        System.out.println(rulesFired);
-        return t;
+        ksession.fireAllRules();
+        System.out.println(t.getRuleName());
+        List<String> rulesList = new ArrayList<>();
+        rulesList.add(t.getRuleName());
+        return rulesList;
     }
 }

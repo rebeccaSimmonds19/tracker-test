@@ -1,21 +1,27 @@
 package tracker.requirements;
 
+import onespot.pivotal.api.resources.Story;
 import org.kie.api.KieBase;
+
+import java.util.List;
 
 public class Main
 {
     public static void main(String[] args)
     {
         Collector c = new Collector();
-        c.connect();
 
         Transaction t = new Transaction();
         t.setScore(90);
 
         Filter f = new Filter();
         KieBase kb = f.loadRules();
+        List<String> rules = f.executeDroolsRules(kb,t);
 
-        System.out.println("credit is approved "+ f.executeDroolsRules(kb,t).getApproved());
+        List<Story> stories = c.collectRequirements();
+
+        Report report = new Report();
+        report.createReport(stories,rules);
 
     }
 }
